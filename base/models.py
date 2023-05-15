@@ -35,4 +35,4 @@ class Task(models.Model):
         return self.description
 
     class Meta:
-        ordering = ['completed']
+        order_with_respect_to = 'user'
