@@ -4,7 +4,9 @@
 <div class="header-bar">
     <div>
         <h1>Hello {{request.user|title}}</h1>
-        <h3 style="margin:0">You have <strong>{{count}} </strong> incomplete task{{ count|pluralize:"s" }}</h3>
+        <h3 style="margin:0">You have <strong>{{complete_task_count}} </strong> complete task{{ complete_task_count|pluralize:"s" }}</h3>
+        <h3>You have <strong>{{ total_task_count }} total task{{ total_task_count|pluralize:"s" }}</strong></h3>
+        <h3>Percentage of completion: %{{ completion_percentage }}</h3>
     </div>
 
     {% if request.user.is_authenticated %}
@@ -34,7 +36,7 @@
     {% for task in tasks %}
     <div class="task-wrapper" data-position="{{task.pk}}">
         <div class="task-title">
-            {% if task.complete %}
+            {% if task.completed %}
             <div class="task-complete-icon"></div>
             <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i> {% else %}
             <div class="task-incomplete-icon"></div>
