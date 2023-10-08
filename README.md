@@ -34,15 +34,6 @@
 5. Tarayıcınızda aşağıdaki URL'yi açın:
     ```
     http://127.0.0.1:8000/
-## Projede kullanılan kullanıcılar 
-
-1. Admin kullanıcı için :
-    
-    username = ahmet , password = 12345
-
-2. Default kullanıcı için :
-
-     username = user , password = tester12345
 
 ## Buradaki linkten projeye ulaşabilirsiniz:
    http://ahmetkocak.pythonanywhere.com/
